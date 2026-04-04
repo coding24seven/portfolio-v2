@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent; // remove highlight on touch
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box; // Include padding and border in the element's total width and height:
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-y: scroll; // vartical scrollbar always visible
+  ::selection {
+    color: white;
+    background-color: navy;
+  }
+}
+
+body {
+  overflow-x: hidden; // hide the horizontal scrollbar
+}
+
+code {
+  font-family:
+    source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
