@@ -1,6 +1,5 @@
-import { type MouseEvent, useContext, useState } from 'react';
+import { useState } from 'react';
 import { NavLink } from 'react-router';
-import TransitioningContext from '@/page-transition/TransitioningContext.ts';
 import styled from 'styled-components';
 import config from '@/helpers/config.ts';
 import themes from './navbarButton-themes';
@@ -81,7 +80,6 @@ interface NavbarButtonProps {
   themeSize: string;
   to: string;
   selected?: boolean;
-  handleNavLinkClick: (event: MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const NavbarButton = ({
@@ -92,10 +90,8 @@ const NavbarButton = ({
   themeSize,
   to,
   selected,
-  handleNavLinkClick,
 }: NavbarButtonProps) => {
   // In React 19, you can use the 'use' hook for context if preferred
-  const pageHasTransitioned = useContext(TransitioningContext);
   const [hover, setHover] = useState(false);
   const [touched, setTouched] = useState(false);
 
@@ -131,7 +127,6 @@ const NavbarButton = ({
       onTouchEnd={handleTouchEnd}
     >
       <StyledNavLink
-        onClick={handleNavLinkClick}
         to={to}
         state={{ linkName: name, previousPageName: currentPageName }}
       >
