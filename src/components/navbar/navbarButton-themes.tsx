@@ -28,7 +28,7 @@ const {
   rgbGold,
 } = colors;
 
-export default {
+const themes = {
   // SITE-WIDE
   color: 'rgba(255, 255, 255, 0.86)' /* rgbaWhite */,
   borderRadius: '1.3rem',
@@ -169,3 +169,6 @@ export default {
     },
   },
 };
+
+export type NavbarButtonThemes = typeof themes;
+export default themes;
