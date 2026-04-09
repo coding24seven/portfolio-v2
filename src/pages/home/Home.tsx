@@ -66,6 +66,7 @@ export default function Home({ pageTitle }: Props) {
 
   const HomePage = (
     <StyledHomePage>
+      <title>{pageTitle}</title>
       <PositionedWelcome
         className="welcome-text"
         text1="Hi! I'm Arek"
@@ -91,5 +92,4 @@ export default function Home({ pageTitle }: Props) {
   );
 
   return HomePage;
-  // return <Page>{HomePage}</Page>;
 }

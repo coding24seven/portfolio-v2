@@ -1,7 +1,6 @@
 import styled, { css, keyframes } from 'styled-components';
 import config from '@/helpers/config.ts';
 import colors from '@/helpers/colors.ts';
-// import Page from "page-transition/Page";
 
 const em = config.em.bind(config);
 
@@ -137,6 +136,7 @@ const StyledParagraphBox = styled.section`
 export default function About({ pageTitle }) {
   const AboutPage = (
     <StyledPage>
+      <title>{pageTitle}</title>
       <StyledHeadingBox>
         <h1 className="heading1">
           <span>Edward Snowden</span> said,{' '}

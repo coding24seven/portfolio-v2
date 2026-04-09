@@ -93,6 +93,7 @@ export default function Tech(props) {
 
   const TechPage = (
     <StyledPage>
+      <title>{pageTitle}</title>
       <StyledTable>
         <caption>Table 1.0 of Technologies</caption>
         <thead>

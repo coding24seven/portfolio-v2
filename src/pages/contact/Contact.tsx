@@ -263,6 +263,7 @@ export default function Contact(props) {
 
   const ContactPage = (
     <StyledPage>
+      <title>{pageTitle}</title>
       <StyledForm action={formActionUrl} method="post" onSubmit={handleSubmit}>
         {/* HEADING */}
         <h1>Get in touch</h1>

@@ -53,6 +53,7 @@ export default function Experience(props) {
 
   const ExperiencePage = (
     <StyledPage>
+      <title>{pageTitle}</title>
       <StyledProjectBoxesContainer>
         <ProjectBox project={youTubeMagic} />
         <ProjectBox project={bayer} />
