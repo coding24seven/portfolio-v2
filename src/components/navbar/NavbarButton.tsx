@@ -9,10 +9,20 @@ const buttonHeight = config.navbar.horizontal.button.height;
 
 const em = config.em.bind(config);
 
-const StyledLinkWrapper = styled.div<{
+const StyledNavLink = styled(NavLink)<{
   $hover: boolean;
   $rules: Record<string, string>;
 }>`
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+
+  &.active {
+    pointer-events: none;
+  }
+
   height: ${buttonHeight}rem;
 
   overflow: hidden;
@@ -88,22 +98,6 @@ const StyledLinkWrapper = styled.div<{
   }
 `;
 
-const StyledNavLink = styled(NavLink)`
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: inherit;
-  text-decoration: none;
-  border-radius: inherit;
-
-  &.active {
-    pointer-events: none;
-  }
-`;
-
 const StyledIcon = styled.i`
   @media (max-width: ${em(500)}em) {
     font-size: 3rem;
@@ -150,7 +144,10 @@ const NavbarButton = ({
   };
 
   const handleMouseEnter = () => {
-    if (touched) setHover(true);
+    if (touched) {
+      return;
+    }
+    setHover(true);
   };
 
   const handleMouseLeave = () => {
@@ -164,10 +161,10 @@ const NavbarButton = ({
   const handleTouchEnd = () => {
     setTimeout(() => {
       setTouched(false);
-    }, 500);
+    }, 1000);
   };
 
-  const linkWrapperProps = selected
+  const linkProps = selected
     ? { className: 'button-selected' }
     : {
         $hover: hover,
@@ -176,23 +173,20 @@ const NavbarButton = ({
       };
 
   return (
-    <StyledLinkWrapper
+    <StyledNavLink
       onMouseLeave={handleMouseLeave}
       onTouchEnd={handleTouchEnd}
-      {...linkWrapperProps}
+      {...linkProps}
       $rules={rules}
+      to={to}
+      state={{ linkName: name, previousPageName: currentPageName }}
     >
-      <StyledNavLink
-        to={to}
-        state={{ linkName: name, previousPageName: currentPageName }}
-      >
-        {themeSize === 'small' ? (
-          <StyledIcon className="material-icons">{iconName}</StyledIcon>
-        ) : (
-          <span>{text}</span>
-        )}
-      </StyledNavLink>
-    </StyledLinkWrapper>
+      {themeSize === 'small' ? (
+        <StyledIcon className="material-icons">{iconName}</StyledIcon>
+      ) : (
+        <span>{text}</span>
+      )}
+    </StyledNavLink>
   );
 };
 
