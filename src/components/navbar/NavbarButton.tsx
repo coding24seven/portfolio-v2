@@ -9,20 +9,10 @@ const buttonHeight = config.navbar.horizontal.button.height;
 
 const em = config.em.bind(config);
 
-const StyledNavLink = styled(NavLink)<{
+const StyledLinkWrapper = styled.div<{
   $hover: boolean;
   $rules: Record<string, string>;
 }>`
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-
-  &.active {
-    pointer-events: none;
-  }
-
   height: ${buttonHeight}rem;
 
   overflow: hidden;
@@ -91,10 +81,27 @@ const StyledNavLink = styled(NavLink)<{
       $hover ? buttonHeight - 1.4 + 'rem' : buttonHeight - 2 + 'rem'};
   }
 
+  /* navlink wrapper (button) when selected */
   &.button-selected {
     cursor: crosshair;
     color: white;
     background-color: ${({ $rules }) => $rules.backgroundColorOnSelected};
+  }
+`;
+
+const StyledNavLink = styled(NavLink)`
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+  border-radius: inherit;
+
+  &.active {
+    pointer-events: none; /* prevent the router */
   }
 `;
 
@@ -173,20 +180,23 @@ const NavbarButton = ({
       };
 
   return (
-    <StyledNavLink
+    <StyledLinkWrapper
       onMouseLeave={handleMouseLeave}
       onTouchEnd={handleTouchEnd}
       {...linkProps}
       $rules={rules}
-      to={to}
-      state={{ linkName: name, previousPageName: currentPageName }}
     >
-      {themeSize === 'small' ? (
-        <StyledIcon className="material-icons">{iconName}</StyledIcon>
-      ) : (
-        <span>{text}</span>
-      )}
-    </StyledNavLink>
+      <StyledNavLink
+        to={to}
+        state={{ linkName: name, previousPageName: currentPageName }}
+      >
+        {themeSize === 'small' ? (
+          <StyledIcon className="material-icons">{iconName}</StyledIcon>
+        ) : (
+          <span>{text}</span>
+        )}
+      </StyledNavLink>
+    </StyledLinkWrapper>
   );
 };
 
