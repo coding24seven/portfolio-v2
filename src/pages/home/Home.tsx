@@ -4,7 +4,6 @@ import config from '@/helpers/config.ts';
 import Welcome from '@/pages/home/Welcome.tsx';
 import BackgroundVideo from '@/pages/home/BackgroundVideo.tsx';
 import LoadingIndicator from '@/pages/home/LoadingIndicator.tsx';
-// import Page from '@/page-transition/Page.tsx';
 
 const em = config.em.bind(config);
 const { videos, poster } = config.header;
@@ -64,7 +63,7 @@ export default function Home({ pageTitle }: Props) {
     setVideoLoaded(true);
   };
 
-  const HomePage = (
+  return (
     <StyledHomePage>
       <title>{pageTitle}</title>
       <PositionedWelcome
@@ -90,6 +89,4 @@ export default function Home({ pageTitle }: Props) {
       />
     </StyledHomePage>
   );
-
-  return HomePage;
 }

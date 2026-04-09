@@ -51,7 +51,7 @@ const StyledProjectBoxesContainer = styled.div`
 export default function Experience(props) {
   const { pageTitle } = props;
 
-  const ExperiencePage = (
+  return (
     <StyledPage>
       <title>{pageTitle}</title>
       <StyledProjectBoxesContainer>
@@ -65,7 +65,4 @@ export default function Experience(props) {
       </StyledProjectBoxesContainer>
     </StyledPage>
   );
-
-  // return <Page>{ExperiencePage}</Page>;
-  return ExperiencePage;
 }

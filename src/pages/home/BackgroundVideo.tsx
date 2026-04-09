@@ -4,13 +4,12 @@
 
 import { type SyntheticEvent, useId, useState } from 'react';
 import styled from 'styled-components';
-// import TransitioningContext from 'page-transition/TransitioningContext';
 
 const StyledVideo = styled.video<{
-  videoIsLoaded: boolean;
+  $videoIsLoaded: boolean;
   playsInline: 'playsInline';
 }>`
-  opacity: ${({ videoIsLoaded }) => (videoIsLoaded ? 1 : 0)};
+  opacity: ${({ $videoIsLoaded }) => ($videoIsLoaded ? 1 : 0)};
   object-fit: cover;
   ${({ poster }) => poster && `background-image : url(${poster});`}
   background-size: cover;
@@ -37,8 +36,6 @@ export default function BackgroundVideo(props: Props) {
   const useId1 = useId();
   const [videoIsLoaded, setVideoIsLoaded] = useState(false);
 
-  // static contextType = TransitioningContext;
-
   const handleLoadedData = (e) => {
     props.handleVideoLoaded();
     setVideoIsLoaded(true);
@@ -52,7 +49,6 @@ export default function BackgroundVideo(props: Props) {
   };
 
   const {
-    /* inactive==true inside preloader, for example */
     inactive,
     className,
     videos,
@@ -88,7 +84,7 @@ export default function BackgroundVideo(props: Props) {
       onLoadedData={inactive ? () => {} : handleLoadedData}
       onError={inactive ? () => {} : handleError}
       {...videoProps}
-      videoIsLoaded={videoIsLoaded}
+      $videoIsLoaded={videoIsLoaded}
     >
       {sourceElements}
     </StyledVideo>

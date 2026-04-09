@@ -134,7 +134,7 @@ const StyledParagraphBox = styled.section`
 `;
 
 export default function About({ pageTitle }) {
-  const AboutPage = (
+  return (
     <StyledPage>
       <title>{pageTitle}</title>
       <StyledHeadingBox>
@@ -172,7 +172,4 @@ export default function About({ pageTitle }) {
       </StyledParagraphBox>
     </StyledPage>
   );
-
-  // return <Page>{AboutPage}</Page>;
-  return AboutPage;
 }

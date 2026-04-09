@@ -7,10 +7,10 @@ import { useContext } from 'react';
 const buttonWidth = config.navbar.vertical.button.width;
 const em = config.em.bind(config);
 
-const StyledNavbar = styled.nav<{ pageHasTransitioned: boolean }>`
+const StyledNavbar = styled.nav<{ $pageHasTransitioned: boolean }>`
   /* retract navbar off screen during transition */
-  left: ${({ pageHasTransitioned }) =>
-    pageHasTransitioned ? 0 : `-${buttonWidth}rem`};
+  left: ${({ $pageHasTransitioned }) =>
+    $pageHasTransitioned ? 0 : `-${buttonWidth}rem`};
   position: fixed;
   z-index: 666;
   top: 50%;
@@ -43,7 +43,7 @@ const Navbar = ({ themeSize, currentPageName }: NavbarProps) => {
   ];
 
   return (
-    <StyledNavbar pageHasTransitioned={pageSlideIsCompleted}>
+    <StyledNavbar $pageHasTransitioned={pageSlideIsCompleted}>
       {navItems.map((item) => (
         <NavbarButton
           key={item.name}

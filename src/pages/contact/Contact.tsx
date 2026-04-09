@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import config from '@/helpers/config.ts';
 import colors from '@/helpers/colors.ts';
-// import Page from "page-transition/Page";
 
 const em = config.em.bind(config);
 const waveImageWidth = '118px';
@@ -245,7 +244,7 @@ const StyledForm = styled.form`
     &.failure {
       pointer-events: none;
       color: #ef0202;
-      letter-spacing: 0.1;
+      letter-spacing: 0.1rem;
       box-shadow: none;
       border-bottom: none;
 
@@ -253,7 +252,7 @@ const StyledForm = styled.form`
         transform: translateY(calc(100% + ${waveImageHeight}));
       }
     }
-  } /* submit button ends */
+  }
 `;
 
 // COMPONENT
@@ -261,7 +260,7 @@ export default function Contact(props) {
   const { pageTitle } = props;
   const { formActionUrl } = config.contact;
 
-  const ContactPage = (
+  return (
     <StyledPage>
       <title>{pageTitle}</title>
       <StyledForm action={formActionUrl} method="post" onSubmit={handleSubmit}>
@@ -308,7 +307,7 @@ export default function Contact(props) {
         <textarea
           name="message"
           id=""
-          rows="7"
+          rows={7}
           placeholder="Message"
           required
           autoCorrect="off"
@@ -322,18 +321,15 @@ export default function Contact(props) {
       </StyledForm>
     </StyledPage>
   );
-
-  return ContactPage;
-  // return <Page>{ContactPage}</Page>;
 }
 
-async function handleSubmit(e) {
+async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
   e.preventDefault();
 
   const submitButton = e.target.querySelector('[type=submit]');
   const submitButtonText = e.target.querySelector('.submit-text');
   const originalButtonValue = submitButtonText.innerText;
-  displayProgress(); // button displays progress
+  displayProgress();
 
   const { formActionUrl } = config.contact;
 
@@ -382,4 +378,4 @@ async function handleSubmit(e) {
       submitButton.classList.remove('failure');
     }, 5000);
   }
-} /* handleSubmit ends */
+}

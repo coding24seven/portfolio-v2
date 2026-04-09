@@ -8,6 +8,10 @@ const em = config.em.bind(config);
 const StyledPage = styled.div`
   min-height: 100vh;
   padding: 8rem 10rem 1rem 22rem;
+  background-image: url('wall.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   font-size: 1.8rem;
   font-weight: 300;
   font-family: Roboto;
@@ -91,7 +95,7 @@ const StyledTable = styled.table`
 export default function Tech(props) {
   const { pageTitle } = props;
 
-  const TechPage = (
+  return (
     <StyledPage>
       <title>{pageTitle}</title>
       <StyledTable>
@@ -215,7 +219,4 @@ export default function Tech(props) {
       </StyledTable>
     </StyledPage>
   );
-
-  return TechPage;
-  // return <Page>{TechPage}</Page>;
 }
