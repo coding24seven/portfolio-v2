@@ -1,0 +1,1336 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > matches snapshot for /about route render 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-fLVvQH btLHVu"
+  >
+    <div
+      class="sc-eEPCQm jfqzuB"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm jfqzuB"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/experience"
+      >
+        <span>
+          Exp
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm jfqzuB"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/tech"
+      >
+        <span>
+          Tech
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm jfqzuB button-selected"
+    >
+      <a
+        aria-current="page"
+        class="sc-gutiYp eUhvBp active"
+        data-discover="true"
+        href="/about"
+      >
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm jfqzuB"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/contact"
+      >
+        <span>
+          Contact
+        </span>
+      </a>
+    </div>
+  </nav>
+  <section
+    style="width: 100%; transform: translateX(100%);"
+  >
+    <div
+      class="sc-epPUyX kTfGKJ"
+    >
+      <section
+        class="sc-fpSqyW hBkzVQ"
+      >
+        <h1
+          class="heading1"
+        >
+          <span>
+            Edward Snowden
+          </span>
+           said,
+           
+          <q>
+            I was reminded of what is perhaps the fundamental rule of technological progress: if something can be done, it probably will be done, and possibly already has been.
+          </q>
+        </h1>
+        <h2
+          class="heading2"
+        >
+          I said "How about doing all that and more in NodeJS plus VueJS or ReactJS?"
+        </h2>
+      </section>
+      <section
+        class="sc-hfvWGZ imtLnP"
+      >
+        <p
+          class="paragraph1"
+        >
+          Talking of which, I tend to indulge in clean and well-documented code, epic adventure, and tuning into the kind of music that fuels my passion for quality and efficiency in everything I do.
+        </p>
+        <p
+          class="paragraph2"
+        >
+          So, if you need help with your project, please get in touch. Should we decide to work together, I'll do my best to help your business run like clockwork by coding websites that people cannot help but go back to.
+        </p>
+        <p
+          class="paragraph3"
+        >
+          See you out there.
+        </p>
+        <p
+          class="signature"
+        >
+          Arek
+        </p>
+      </section>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`App > matches snapshot for /contact route render 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-fLVvQH btLHVu"
+  >
+    <div
+      class="sc-eEPCQm ldtUgM"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm ldtUgM"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/experience"
+      >
+        <span>
+          Exp
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm ldtUgM"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/tech"
+      >
+        <span>
+          Tech
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm ldtUgM"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/about"
+      >
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm ldtUgM button-selected"
+    >
+      <a
+        aria-current="page"
+        class="sc-gutiYp eUhvBp active"
+        data-discover="true"
+        href="/contact"
+      >
+        <span>
+          Contact
+        </span>
+      </a>
+    </div>
+  </nav>
+  <section
+    style="width: 100%; transform: translateX(100%);"
+  >
+    <div
+      class="sc-ifysGY cabTpo"
+    >
+      <form
+        action="https://router.code24seven.pro/portfolio-contact-form/"
+        class="sc-dENgQn vBlUy"
+        method="post"
+      >
+        <h1>
+          Get in touch
+        </h1>
+        <input
+          autocapitalize="off"
+          autocorrect="off"
+          name="name"
+          placeholder="Name"
+          required=""
+          spellcheck="false"
+          type="text"
+        />
+        <input
+          autocapitalize="off"
+          autocorrect="off"
+          name="email"
+          placeholder="Email"
+          required=""
+          spellcheck="false"
+          type="email"
+        />
+        <input
+          autocapitalize="off"
+          autocorrect="off"
+          name="subject"
+          placeholder="Subject"
+          required=""
+          spellcheck="false"
+          type="text"
+        />
+        <textarea
+          autocapitalize="off"
+          autocorrect="off"
+          id=""
+          name="message"
+          placeholder="Message"
+          required=""
+          rows="7"
+          spellcheck="false"
+        />
+        <button
+          type="submit"
+        >
+          <span
+            class="submit-text"
+          >
+            Send Message
+          </span>
+          <span
+            class="submit-wave"
+          />
+        </button>
+      </form>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`App > matches snapshot for /experience route render 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-fLVvQH btLHVu"
+  >
+    <div
+      class="sc-eEPCQm bqnQpO"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm bqnQpO button-selected"
+    >
+      <a
+        aria-current="page"
+        class="sc-gutiYp eUhvBp active"
+        data-discover="true"
+        href="/experience"
+      >
+        <span>
+          Exp
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm bqnQpO"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/tech"
+      >
+        <span>
+          Tech
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm bqnQpO"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/about"
+      >
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm bqnQpO"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/contact"
+      >
+        <span>
+          Contact
+        </span>
+      </a>
+    </div>
+  </nav>
+  <section
+    style="width: 100%; transform: translateX(100%);"
+  >
+    <div
+      class="sc-jzjJTG eNryOh"
+    >
+      <div
+        class="sc-czglUn eCpiBv"
+      >
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              YouTube Magic
+            </h2>
+            <p
+              class="description"
+            >
+              A Firefox browser extension that filters out watched and members-only YouTube videos, keeping your YouTube feeds fresh and uncluttered.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                TypeScript, ReactJS, NodeJS.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://addons.mozilla.org/en-US/firefox/addon/youtube-magic/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://addons.mozilla.org/en-US/firefox/addon/youtube-magic/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="youtube_magic_options_popup.png"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://addons.mozilla.org/en-US/firefox/addon/youtube-magic/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="youtube_magic_options_popup.png"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              Bayer Crop Science
+            </h2>
+            <p
+              class="description"
+            >
+              A tailored solution for farmers who want to plant, grow and protect their harvests using less land, water and energy.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                TypeScript, ReactJS, VueJS, NodeJS.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://login.cropscience.bayer.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://login.cropscience.bayer.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="bayer-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://login.cropscience.bayer.com"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="bayer-square.jpg"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              NBB Store
+            </h2>
+            <p
+              class="description"
+            >
+              An e-commerce store by the company I worked for.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                TypeScript, ReactJS, VueJS, NodeJS.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://notebooksbilliger.de"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://notebooksbilliger.de"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="mobile-nbb-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://notebooksbilliger.de"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="mobile-nbb-square.jpg"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              Crypto Trading Bot
+            </h2>
+            <p
+              class="description"
+            >
+              A bot that trades cryptocurrency.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                NodeJS, Typescript.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV github"
+                href="https://github.com/coding24seven/trading-bot"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://github.com/coding24seven/trading-bot"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="trading-bot-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://github.com/coding24seven/trading-bot"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="trading-bot-square.jpg"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              Fresh Life
+            </h2>
+            <p
+              class="description"
+            >
+              A site for an imaginary food-delivery service. Here I converted an example PSD image, throwing in my own literary and visual creativity into the pan.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                HTML, SASS/CSS.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://coding24seven.github.io/Fresh-life"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+              <a
+                class="sc-dnaVFx HxxXV github"
+                href="https://github.com/coding24seven/Fresh-life"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://coding24seven.github.io/Fresh-life"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="cahee-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://coding24seven.github.io/Fresh-life"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="cahee-square.jpg"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              Mum's Meals
+            </h2>
+            <p
+              class="description"
+            >
+              A journal of meals one has prepared or eaten. Ever since my mother started using it, the taste has improved by 49%.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                Webpack, NodeJS, ExpressJS
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://kuchnia-demo.code24seven.pro"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+              <a
+                class="sc-dnaVFx HxxXV github"
+                href="https://github.com/coding24seven/Meals"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://kuchnia-demo.code24seven.pro"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="meals-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://kuchnia-demo.code24seven.pro"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="meals-square.jpg"
+            />
+          </a>
+        </figure>
+        <figure
+          class="sc-kkmxCq fUNBsZ"
+        >
+          <figcaption
+            class="sc-jCbFWg boXpfh"
+          >
+            <h2>
+              Roofland
+            </h2>
+            <p
+              class="description"
+            >
+              A site for a fictional roofing company. I derived it from an example PSD image, which then I complemented with my own textual matter.
+            </p>
+            <p
+              class="technologies"
+            >
+              Technologies used: 
+              <span>
+                HTML, SCSS, JavaScript.
+              </span>
+            </p>
+            <div
+              class="sc-knetEQ fKKSUe sc-cBYhWN hQdluT positioned-button"
+            >
+              <a
+                class="sc-dnaVFx HxxXV site"
+                href="https://coding24seven.github.io/Roof-land"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Site
+              </a>
+              <a
+                class="sc-dnaVFx HxxXV github"
+                href="https://github.com/coding24seven/Roof-land"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                Github
+              </a>
+            </div>
+          </figcaption>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm square-image-link"
+            href="https://coding24seven.github.io/Roof-land"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="roofland-square.jpg"
+            />
+          </a>
+          <a
+            class="sc-iCZxss dQjTVO sc-dkiZCX gfweNm rectangular-image-link"
+            href="https://coding24seven.github.io/Roof-land"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt=""
+              src="roofland-square.jpg"
+            />
+          </a>
+        </figure>
+      </div>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`App > matches snapshot for /tech route render 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-fLVvQH btLHVu"
+  >
+    <div
+      class="sc-eEPCQm khJGKc"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm khJGKc"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/experience"
+      >
+        <span>
+          Exp
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm khJGKc button-selected"
+    >
+      <a
+        aria-current="page"
+        class="sc-gutiYp eUhvBp active"
+        data-discover="true"
+        href="/tech"
+      >
+        <span>
+          Tech
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm khJGKc"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/about"
+      >
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm khJGKc"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/contact"
+      >
+        <span>
+          Contact
+        </span>
+      </a>
+    </div>
+  </nav>
+  <section
+    style="width: 100%; transform: translateX(100%);"
+  >
+    <div
+      class="sc-tOlxE jAzcgC"
+    >
+      <table
+        class="sc-eJgwXh hKoELL"
+      >
+        <caption>
+          Table 1.0 of Technologies
+        </caption>
+        <thead>
+          <tr>
+            <th>
+              Technology
+            </th>
+            <th>
+              Case
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              Azure Devops, Jira
+            </td>
+            <td>
+              is where I can locate all work items and create new ones
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Git
+            </td>
+            <td>
+              is a version control system I rely on for every project
+            </td>
+          </tr>
+          <tr>
+            <td>
+              English
+            </td>
+            <td>
+              is a language I speak and write at native level, just like Polish
+            </td>
+          </tr>
+          <tr>
+            <td>
+              TypeScript
+            </td>
+            <td>
+              is what keeps all kinds of types in check
+            </td>
+          </tr>
+          <tr>
+            <td>
+              JavaScript
+            </td>
+            <td>
+              is part of every project of mine
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Vue.js
+            </td>
+            <td>
+              is a library I've worked with on e-commerce store and accounting systems
+            </td>
+          </tr>
+          <tr>
+            <td>
+              React.js
+            </td>
+            <td>
+              is a library that is good for building single-page sites like this one
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Node.js
+            </td>
+            <td>
+              is a runtime I've used to implement the backend for many sites
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Express.js
+            </td>
+            <td>
+              is my go-to framework for setting up servers in Node.js
+            </td>
+          </tr>
+          <tr>
+            <td>
+              AWS, Google Cloud
+            </td>
+            <td>
+              is where I've deployed apps
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Github Actions
+            </td>
+            <td>
+              is how continuous integration/delivery can be done
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Postgres
+            </td>
+            <td>
+              is a relational database management system I use
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Docker containers
+            </td>
+            <td>
+              is how services can be developed, tested, and deployed
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Jest
+            </td>
+            <td>
+              is what I use for unit and integration testing
+            </td>
+          </tr>
+          <tr>
+            <td>
+              HTML
+            </td>
+            <td>
+              is useful for creating tables such as this one
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CSS
+            </td>
+            <td>
+              is a language I use to style HTML documents
+            </td>
+          </tr>
+          <tr>
+            <td>
+              SCSS
+            </td>
+            <td>
+              is CSS on steroids
+            </td>
+          </tr>
+          <tr>
+            <td>
+              Webpack
+            </td>
+            <td>
+              is a module bundler I could live without
+            </td>
+          </tr>
+          <tr>
+            <td>
+              ESLint
+            </td>
+            <td>
+              is a tool that flags a custom range of programming and stylistic errors
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`App > matches snapshot for the default route render 1`] = `
+<div
+  class="App"
+>
+  <nav
+    class="sc-fLVvQH btLHVu"
+  >
+    <div
+      class="sc-eEPCQm eYXxcb button-selected"
+    >
+      <a
+        aria-current="page"
+        class="sc-gutiYp eUhvBp active"
+        data-discover="true"
+        href="/"
+      >
+        <span>
+          Home
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm eYXxcb"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/experience"
+      >
+        <span>
+          Exp
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm eYXxcb"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/tech"
+      >
+        <span>
+          Tech
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm eYXxcb"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/about"
+      >
+        <span>
+          About
+        </span>
+      </a>
+    </div>
+    <div
+      class="sc-eEPCQm eYXxcb"
+    >
+      <a
+        class="sc-gutiYp eUhvBp"
+        data-discover="true"
+        href="/contact"
+      >
+        <span>
+          Contact
+        </span>
+      </a>
+    </div>
+  </nav>
+  <section
+    style="width: 100%; transform: translateX(100%);"
+  >
+    <header
+      class="sc-dsLRjI cQjaQF"
+    >
+      <h1
+        class="sc-gJhJfT gVuCKf sc-gnpauu eXjQlZ welcome-text"
+      >
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0s;"
+        >
+          H
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.032s;"
+        >
+          i
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.065s;"
+        >
+          !
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.097s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.129s;"
+        >
+          I
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.161s;"
+        >
+          '
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.194s;"
+        >
+          m
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.226s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.258s;"
+        >
+          A
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.29s;"
+        >
+          r
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.323s;"
+        >
+          e
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.355s;"
+        >
+          k
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.387s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.419s;"
+        >
+          -
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.452s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.484s;"
+        >
+          a
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.516s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.548s;"
+        >
+          w
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.581s;"
+        >
+          e
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.613s;"
+        >
+          b
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.645s;"
+        >
+           
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.677s;"
+        >
+          d
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.71s;"
+        >
+          e
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.742s;"
+        >
+          v
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.774s;"
+        >
+          e
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.806s;"
+        >
+          l
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.839s;"
+        >
+          o
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.871s;"
+        >
+          p
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.903s;"
+        >
+          e
+        </span>
+        <span
+          class="sc-brayMQ cPuPbc"
+          style="animation-delay: 0.935s;"
+        >
+          r
+        </span>
+      </h1>
+      <video
+        autoplay=""
+        class="sc-elDHXC egHtwD sc-la-DyAJ gUtbDy background-video"
+        loop=""
+        playsinline=""
+        poster="poster.jpg"
+        preload="auto"
+      >
+        <source
+          codecs="hevc"
+          src="./vid/animation-h265.mp4"
+          type="video/mp4"
+        />
+        <source
+          src="./vid/animation-h264.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </header>
+  </section>
+</div>
+`;

@@ -26,7 +26,7 @@ const StyledNavbar = styled.nav<{ $pageHasTransitioned: boolean }>`
   }
 `;
 
-interface NavbarProps {
+export interface NavbarProps {
   themeSize: string;
   currentPageName: string;
 }

@@ -44,7 +44,6 @@ const App = () => {
             <Route
               path={route.path}
               element={<route.element pageTitle={route.pageTitle} />}
-              slideBackground
             />
           ))}
         </Routes>
