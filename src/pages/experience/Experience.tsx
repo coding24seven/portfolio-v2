@@ -3,7 +3,6 @@
  */
 
 import styled from 'styled-components';
-// import Page from 'page-transition/Page';
 import colors from '@/helpers/colors.ts';
 import ProjectBox from '@/pages/experience/ProjectBox';
 import config from '@/helpers/config.ts';
@@ -48,7 +47,7 @@ const StyledProjectBoxesContainer = styled.div`
   }
 `;
 
-export default function Experience(props) {
+export default function Experience(props: { pageTitle: string }) {
   const { pageTitle } = props;
 
   return (

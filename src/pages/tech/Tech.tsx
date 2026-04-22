@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import Page from 'page-transition/Page';
 import colors from '@/helpers/colors.ts';
 import config from '@/helpers/config.ts';
 
@@ -92,7 +91,7 @@ const StyledTable = styled.table`
   }
 `;
 
-export default function Tech(props) {
+export default function Tech(props: { pageTitle: string }) {
   const { pageTitle } = props;
 
   return (
