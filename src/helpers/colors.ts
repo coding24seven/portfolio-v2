@@ -23,4 +23,6 @@ export default {
   rgbFriendlyGreen: '#3e8a6c',
   rgbaFriendlyGreen: 'rgba(62, 138, 108, 0.26)',
   rgbGold: 'rgb(194, 138, 51)',
+  hexVioletAlpha: '#57389bf5',
+  hexGold: '#c69f2a',
 };

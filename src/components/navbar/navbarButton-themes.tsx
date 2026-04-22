@@ -8,24 +8,19 @@ import colors from '@/helpers/colors.ts';
 const {
   rgbaGrey,
   rgbViolet,
-  rgbaViolet,
   rgbVioletBlack,
   rgbBlue,
-  rgbaForestGreen,
-  rgbForestGreen,
   rgbGreyDark,
-  rgbBrownWhite,
-  rgbaBrownWhite,
   rgbaMediumGrey,
   rgbOrange,
   rgbBlackIsh,
   rgbFriendlyGreen,
   rgbGrey,
-  rgbGreyAbout,
-  rgbaGreyAbout,
   rgbGreyGreen,
   rgbaGreyGreen,
   rgbGold,
+  hexVioletAlpha,
+  hexGold,
 } = colors;
 
 const themes = {
@@ -115,6 +110,31 @@ const themes = {
       backgroundColor: rgbBlue,
       activeLinkStyle: {
         backgroundColor: rgbGrey,
+      },
+    },
+  },
+  chat: {
+    fontFamily: 'Roboto',
+    fontWeight: 300,
+    letterSpacing: '.1rem',
+    fontSize: '1.8rem',
+    large: {
+      backgroundColor: hexVioletAlpha,
+
+      activeLinkStyle: {
+        backgroundColor: hexGold,
+      },
+    },
+    medium: {
+      backgroundColor: hexVioletAlpha,
+      activeLinkStyle: {
+        backgroundColor: hexGold,
+      },
+    },
+    small: {
+      backgroundColor: hexVioletAlpha,
+      activeLinkStyle: {
+        backgroundColor: hexGold,
       },
     },
   },

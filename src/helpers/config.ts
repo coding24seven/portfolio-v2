@@ -7,7 +7,7 @@ const config = {
   pageTransitionDurationMs: 1000, // includes delay
   pageTransitionDelayMs: 50, // for css transition
 
-  pages: ['home', 'experience', 'tech', 'about', 'contact'],
+  pages: ['home', 'chat', 'tech', 'experience', 'about', 'contact'],
 
   getPageIndex: function (page: string) {
     return this.pages.indexOf(page);

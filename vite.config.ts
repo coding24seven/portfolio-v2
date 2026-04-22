@@ -8,6 +8,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0', // or simply: host: true
     port: 5173,
+    watch: { usePolling: true },
   },
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
   resolve: {

@@ -3,7 +3,7 @@ import { type ReactNode, useContext, useEffect } from 'react';
 import { useLocation } from 'react-router';
 import { pageSliderContext } from '@/page-slider/page-slider-context.ts';
 
-const pageOrder = ['/', '/experience', '/tech', '/about', '/contact'];
+const pageOrder = ['/', 'chat', '/experience', '/tech', '/about', '/contact'];
 
 const variants = {
   // Where the new page starts on the x axis
