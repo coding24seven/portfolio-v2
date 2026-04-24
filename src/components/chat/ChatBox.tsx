@@ -1,28 +1,26 @@
-import { useState, type ChangeEvent, type SubmitEvent } from 'react';
+import { type ChangeEvent, type SubmitEvent, useState } from 'react';
 import styled from 'styled-components';
 import ChatBot from '@/components/chat/chat.ts';
+import colors from '@/helpers/colors.ts';
+import { Bubble } from '@/components/chat/Bubble.tsx';
+import { SendButton } from '@/components/chat/SendButton.tsx';
 
 interface Message {
   type: 'Q' | 'A';
   text: string;
 }
 
-interface BubbleProps {
-  isQuestion: boolean;
-}
-
 const ChatWrapper = styled.div`
   max-width: 500px;
-  margin: 20px auto;
+  margin: 0 auto;
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  border: 1px solid #ddd;
+  border: 1px solid ${colors.hexGold};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   height: 450px;
   background-color: #fdfdfd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 `;
 
 const MessageArea = styled.div`
@@ -34,20 +32,7 @@ const MessageArea = styled.div`
   gap: 12px;
 `;
 
-const Bubble = styled.div<BubbleProps>`
-  max-width: 85%;
-  padding: 10px 16px;
-  border-radius: 18px;
-  font-size: 14px;
-  line-height: 1.5;
-  align-self: ${(props) => (props.isQuestion ? 'flex-end' : 'flex-start')};
-  background-color: ${(props) => (props.isQuestion ? '#007bff' : '#f0f0f0')};
-  color: ${(props) => (props.isQuestion ? 'white' : '#333')};
-  border-bottom-right-radius: ${(props) => (props.isQuestion ? '2px' : '18px')};
-  border-bottom-left-radius: ${(props) => (props.isQuestion ? '18px' : '2px')};
-`;
-
-const InputSection = styled.form`
+const FormSection = styled.form`
   display: flex;
   padding: 15px;
   border-top: 1px solid #eee;
@@ -56,46 +41,27 @@ const InputSection = styled.form`
   border-bottom-right-radius: 8px;
 `;
 
-const TextBox = styled.input`
+const InputBox = styled.input`
   flex: 1;
   padding: 10px 15px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid ${colors.hexGold};
   border-radius: 20px;
   outline: none;
   &:focus {
-    border-color: #007bff;
-  }
-`;
-
-const SendButton = styled.button`
-  margin-left: 10px;
-  padding: 0 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.2s;
-  &:hover {
-    background-color: #0056b3;
-  }
-  &:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+    border-color: ${colors.hexVioletAlpha};
   }
 `;
 
 export default function ChatBox() {
   const [history, setHistory] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
-    console.log('in handleSubmit ');
-
     e.preventDefault();
     if (!input.trim()) return;
 
+    setIsLoading(true);
     const response = await ChatBot.sendPrompt(input);
     console.log(response);
     const responseBody = JSON.parse(response.body).response;
@@ -105,11 +71,14 @@ export default function ChatBox() {
 
     setHistory((prev) => [...prev, userQuestion, botReply]);
     setInput('');
+    setIsLoading(false);
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
+
+  const sendButtonIsDisabled = isLoading || !input.trim();
 
   return (
     <ChatWrapper>
@@ -121,17 +90,15 @@ export default function ChatBox() {
         ))}
       </MessageArea>
 
-      <InputSection onSubmit={handleSubmit}>
-        <TextBox
+      <FormSection onSubmit={handleSubmit}>
+        <InputBox
           type="text"
           value={input}
           onChange={handleInputChange}
           placeholder="Ask a question..."
         />
-        <SendButton type="submit" disabled={!input.trim()}>
-          Send
-        </SendButton>
-      </InputSection>
+        <SendButton disabled={sendButtonIsDisabled}>Send</SendButton>
+      </FormSection>
     </ChatWrapper>
   );
 }

@@ -6,7 +6,7 @@ const em = config.em.bind(config);
 function getCss() {
   return {
     minHeight: '100vh',
-    padding: '11rem 3rem 3rem 16rem',
+    padding: '13rem 3rem 3rem 16rem',
     backgroundColor: '#eee',
     [`@media (max-width: ${em(1100)}em)`]: {
       padding: '10.7rem 3rem 3rem 3rem',
@@ -23,11 +23,13 @@ function getCss() {
   };
 }
 
+const css = getCss();
+
 export default function Chat(props: { pageTitle: string }) {
   const { pageTitle } = props;
 
   return (
-    <section css={getCss()}>
+    <section css={css}>
       <title>{pageTitle}</title>
       <ChatBox />
     </section>
