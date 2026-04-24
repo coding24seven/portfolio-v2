@@ -1,4 +1,9 @@
-import { type ChangeEvent, type SubmitEvent, useState } from 'react';
+import {
+  type ChangeEvent,
+  type SubmitEvent,
+  useState,
+  useTransition,
+} from 'react';
 import styled from 'styled-components';
 import ChatBot from '@/components/chat/chat.ts';
 import colors from '@/helpers/colors.ts';
@@ -55,30 +60,28 @@ const InputBox = styled.input`
 export default function ChatBox() {
   const [history, setHistory] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
-  const [isLoading, setIsLoading] = useState(false);
+  const [isPending, startTransition] = useTransition();
 
   const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input.trim()) return;
 
-    setIsLoading(true);
-    const response = await ChatBot.sendPrompt(input);
-    console.log(response);
-    const responseBody = JSON.parse(response.body).response;
-    console.log(responseBody);
-    const userQuestion: Message = { type: 'Q', text: input.trim() };
-    const botReply: Message = { type: 'A', text: responseBody };
+    startTransition(async () => {
+      const response = await ChatBot.sendPrompt(input);
+      const responseBody = JSON.parse(response.body).response;
+      const userQuestion: Message = { type: 'Q', text: input.trim() };
+      const botReply: Message = { type: 'A', text: responseBody };
 
-    setHistory((prev) => [...prev, userQuestion, botReply]);
-    setInput('');
-    setIsLoading(false);
+      setHistory((prev) => [...prev, userQuestion, botReply]);
+      setInput('');
+    });
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
   };
 
-  const sendButtonIsDisabled = isLoading || !input.trim();
+  const sendButtonIsDisabled = isPending || !input.trim();
 
   return (
     <ChatWrapper>
