@@ -3,10 +3,17 @@
 - `npm run dev`
 - `npm run test:watch`
 
-## Docker
+## Docker development
 
-- `docker build -t portfolio .`
-- `docker run -it -v $PWD:/app --name portfolio-container -p 5173:5173 portfolio /bin/bash`
+- `docker build -t portfolio-ui .`
+- `docker run -it \
+  --name portfolio-ui \
+  -v "$(pwd):/app" \
+  -v "$HOME/.config/opencode:/root/.config/opencode" \
+  -v "$HOME/.local/share/opencode:/root/.local/share/opencode" \
+  -v "$HOME/.cache/opencode:/root/.cache/opencode" \
+  -p 5173:5173 \
+  portfolio-ui /bin/bash`
 - `docker start -i portfolio-container`
 
 ## Develop

@@ -2,14 +2,11 @@ FROM node:24-slim
 
 WORKDIR /app
 
-# COPY package*.json ./
+# Install system dependencies (needed for many Node projects and OpenCode)
+RUN apt-get update && apt-get install -y \
+    git \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-# RUN npm install
-
-# COPY . .
-
-# Vite's default dev port
-EXPOSE 5173
-
-# 'host: true' is required for Vite to be accessible outside the container
-# CMD ["npm", "run", "dev", "--", "--host"]
+#RUN npm i -g opencode-ai
+RUN curl -fsSL https://opencode.ai/install | bash

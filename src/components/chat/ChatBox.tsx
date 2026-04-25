@@ -1,6 +1,8 @@
 import {
   type ChangeEvent,
   type SubmitEvent,
+  useEffect,
+  useRef,
   useState,
   useTransition,
 } from 'react';
@@ -61,19 +63,29 @@ export default function ChatBox() {
   const [history, setHistory] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
   const [isPending, startTransition] = useTransition();
+  const messageAreaRef = useRef(null);
+
+  useEffect(() => {
+    messageAreaRef.current.scrollTo({
+      top: messageAreaRef.current.scrollHeight,
+      behavior: 'smooth',
+    });
+  }, [history]);
 
   const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!input.trim()) return;
 
+    const userQuestion: Message = { type: 'Q', text: input.trim() };
+    setInput('');
+    setHistory((prev) => [...prev, userQuestion]);
+
     startTransition(async () => {
       const response = await ChatBot.sendPrompt(input);
       const responseBody = JSON.parse(response.body).response;
-      const userQuestion: Message = { type: 'Q', text: input.trim() };
       const botReply: Message = { type: 'A', text: responseBody };
 
-      setHistory((prev) => [...prev, userQuestion, botReply]);
-      setInput('');
+      setHistory((prev) => [...prev, botReply]);
     });
   };
 
@@ -85,7 +97,7 @@ export default function ChatBox() {
 
   return (
     <ChatWrapper>
-      <MessageArea>
+      <MessageArea ref={messageAreaRef}>
         {history.map((item, index) => (
           <Bubble key={index} isQuestion={item.type === 'Q'}>
             {item.text}
