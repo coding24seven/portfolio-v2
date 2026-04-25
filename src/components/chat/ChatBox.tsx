@@ -31,13 +31,18 @@ const ChatWrapper = styled.div`
 `;
 
 const MessageArea = styled.div`
-  flex: 1;
-  padding: 15px;
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  padding: 15px 0 15px 15px;
+  overflow: hidden;
 `;
+
+const scrollAreaStyles = () => ({
+  height: '100%',
+  overflowY: 'auto' as const,
+  display: 'flex' as const,
+  flexDirection: 'column' as const,
+  gap: 12,
+  paddingRight: 15,
+});
 
 const FormSection = styled.form`
   display: flex;
@@ -63,11 +68,15 @@ export default function ChatBox() {
   const [history, setHistory] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
   const [isPending, startTransition] = useTransition();
-  const messageAreaRef = useRef(null);
+  const scrollAreaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    messageAreaRef.current.scrollTo({
-      top: messageAreaRef.current.scrollHeight,
+    if (!scrollAreaRef.current) {
+      return;
+    }
+
+    scrollAreaRef.current.scrollTo({
+      top: scrollAreaRef.current.scrollHeight,
       behavior: 'smooth',
     });
   }, [history]);
@@ -97,12 +106,14 @@ export default function ChatBox() {
 
   return (
     <ChatWrapper>
-      <MessageArea ref={messageAreaRef}>
-        {history.map((item, index) => (
-          <Bubble key={index} isQuestion={item.type === 'Q'}>
-            {item.text}
-          </Bubble>
-        ))}
+      <MessageArea>
+        <div ref={scrollAreaRef} css={scrollAreaStyles()}>
+          {history.map((item, index) => (
+            <Bubble key={index} isQuestion={item.type === 'Q'}>
+              {item.text}
+            </Bubble>
+          ))}
+        </div>
       </MessageArea>
 
       <FormSection onSubmit={handleSubmit}>
