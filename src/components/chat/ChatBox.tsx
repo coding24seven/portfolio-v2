@@ -11,7 +11,7 @@ import ChatBot from '@/components/chat/chat.ts';
 import colors from '@/helpers/colors.ts';
 import { Bubble } from '@/components/chat/Bubble.tsx';
 import { MessageArea } from '@/components/chat/MessageArea.tsx';
-import { SendButton } from '@/components/chat/SendButton.tsx';
+import { ChatForm } from '@/components/chat/ChatForm.tsx';
 
 interface Message {
   type: 'Q' | 'A';
@@ -29,26 +29,6 @@ const ChatWrapper = styled.div`
   flex-direction: column;
   height: 450px;
   background-color: #fdfdfd;
-`;
-
-const Form = styled.form`
-  display: flex;
-  padding: 15px;
-  border-top: 1px solid #eee;
-  background: white;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
-`;
-
-const InputBox = styled.input`
-  flex: 1;
-  padding: 10px 15px;
-  border: 1px solid ${colors.hexGold};
-  border-radius: 20px;
-  outline: none;
-  &:focus {
-    border-color: ${colors.hexVioletAlpha};
-  }
 `;
 
 export default function ChatBox() {
@@ -101,15 +81,12 @@ export default function ChatBox() {
         ))}
       </MessageArea>
 
-      <Form onSubmit={handleSubmit}>
-        <InputBox
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Ask a question..."
-        />
-        <SendButton disabled={sendButtonIsDisabled}>Send</SendButton>
-      </Form>
+      <ChatForm
+        input={input}
+        onChange={handleInputChange}
+        onSubmit={handleSubmit}
+        disabled={sendButtonIsDisabled}
+      />
     </ChatWrapper>
   );
 }
