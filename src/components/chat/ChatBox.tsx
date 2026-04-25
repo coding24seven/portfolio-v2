@@ -31,7 +31,7 @@ const ChatWrapper = styled.div`
   background-color: #fdfdfd;
 `;
 
-const FormSection = styled.form`
+const Form = styled.form`
   display: flex;
   padding: 15px;
   border-top: 1px solid #eee;
@@ -101,7 +101,7 @@ export default function ChatBox() {
         ))}
       </MessageArea>
 
-      <FormSection onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit}>
         <InputBox
           type="text"
           value={input}
@@ -109,7 +109,7 @@ export default function ChatBox() {
           placeholder="Ask a question..."
         />
         <SendButton disabled={sendButtonIsDisabled}>Send</SendButton>
-      </FormSection>
+      </Form>
     </ChatWrapper>
   );
 }
