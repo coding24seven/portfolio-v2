@@ -13,6 +13,7 @@
   -v "$HOME/.local/share/opencode:/root/.local/share/opencode" \
   -v "$HOME/.cache/opencode:/root/.cache/opencode" \
   -p 5173:5173 \
+  -p 4096:4096 \
   portfolio-ui /bin/bash`
 - `docker start -i portfolio-container`
 
