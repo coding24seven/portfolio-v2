@@ -6,7 +6,7 @@ import {
   useState,
   useTransition,
 } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
 import ChatBot from '@/components/chat/chat.ts';
 import colors from '@/helpers/colors.ts';
 import { Bubble } from '@/components/chat/Bubble.tsx';

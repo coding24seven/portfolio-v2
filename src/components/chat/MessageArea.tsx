@@ -1,5 +1,6 @@
 import { type ReactNode, type RefObject } from 'react';
-import styled from 'styled-components';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const Wrapper = styled.div`
   flex: 1;
@@ -24,7 +25,7 @@ type Props = {
 export const MessageArea = ({ children, scrollRef }: Props) => {
   return (
     <Wrapper>
-      <div ref={scrollRef} css={scrollAreaStyles()}>
+      <div ref={scrollRef} css={css(scrollAreaStyles())}>
         {children}
       </div>
     </Wrapper>
