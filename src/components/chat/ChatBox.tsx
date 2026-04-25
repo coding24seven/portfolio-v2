@@ -1,4 +1,9 @@
-import { type ChangeEvent, useActionState, useState } from 'react';
+import {
+  type ChangeEvent,
+  type SubmitEvent,
+  useState,
+  useTransition,
+} from 'react';
 import styled from 'styled-components';
 import ChatBot from '@/components/chat/chat.ts';
 import colors from '@/helpers/colors.ts';
@@ -52,26 +57,25 @@ const InputBox = styled.input`
   }
 `;
 
-async function sendMessageAction(
-  prevState: { messages: Message[] },
-  formData: FormData,
-): Promise<{ messages: Message[] }> {
-  const input = formData.get('message') as string;
-  const response = await ChatBot.sendPrompt(input);
-  const responseBody = JSON.parse(response.body).response;
-  const userQuestion: Message = { type: 'Q', text: input };
-  const botReply: Message = { type: 'A', text: responseBody };
-  return {
-    ...prevState,
-    messages: [...prevState.messages, userQuestion, botReply],
-  };
-}
-
 export default function ChatBox() {
+  const [history, setHistory] = useState<Message[]>([]);
   const [input, setInput] = useState<string>('');
-  const [state, formAction, isPending] = useActionState(sendMessageAction, {
-    messages: [],
-  });
+  const [isPending, startTransition] = useTransition();
+
+  const handleSubmit = async (e: SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!input.trim()) return;
+
+    startTransition(async () => {
+      const response = await ChatBot.sendPrompt(input);
+      const responseBody = JSON.parse(response.body).response;
+      const userQuestion: Message = { type: 'Q', text: input.trim() };
+      const botReply: Message = { type: 'A', text: responseBody };
+
+      setHistory((prev) => [...prev, userQuestion, botReply]);
+      setInput('');
+    });
+  };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     setInput(e.target.value);
@@ -82,17 +86,16 @@ export default function ChatBox() {
   return (
     <ChatWrapper>
       <MessageArea>
-        {state.messages.map((item: Message, index: number) => (
+        {history.map((item, index) => (
           <Bubble key={index} isQuestion={item.type === 'Q'}>
             {item.text}
           </Bubble>
         ))}
       </MessageArea>
 
-      <FormSection action={formAction}>
+      <FormSection onSubmit={handleSubmit}>
         <InputBox
           type="text"
-          name="message"
           value={input}
           onChange={handleInputChange}
           placeholder="Ask a question..."
