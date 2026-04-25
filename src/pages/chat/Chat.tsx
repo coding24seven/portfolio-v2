@@ -7,7 +7,7 @@ function getCss() {
   return {
     minHeight: '100vh',
     padding: '13rem 3rem 3rem 16rem',
-    backgroundColor: '#eee',
+    backgroundColor: '#fafafa',
     [`@media (max-width: ${em(1100)}em)`]: {
       padding: '10.7rem 3rem 3rem 3rem',
     },

@@ -36,7 +36,7 @@ const Navbar = ({ themeSize, currentPageName }: NavbarProps) => {
 
   const navItems = [
     { name: 'home', text: 'Home', icon: 'home', to: '/' },
-    { name: 'chat', text: 'Chat', icon: 'build', to: '/chat' }, // update icon
+    { name: 'chat', text: 'Chat', icon: 'build', to: '/chat' }, // todo: update icon
     { name: 'experience', text: 'Exp', icon: 'work', to: '/experience' },
     { name: 'tech', text: 'Tech', icon: 'build', to: '/tech' },
     { name: 'about', text: 'About', icon: 'person', to: '/about' },

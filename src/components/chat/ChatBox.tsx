@@ -28,7 +28,7 @@ const ChatWrapper = styled.div`
   display: flex;
   flex-direction: column;
   height: 450px;
-  background-color: #fdfdfd;
+  background-color: #fafafa;
 `;
 
 export default function ChatBox() {

@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import { type ReactNode } from 'react';
+import colors from '@/helpers/colors.ts';
 
 interface BubbleProps {
   isQuestion: boolean;
@@ -11,9 +12,9 @@ const bubbleStyles = (isQuestion: boolean) => ({
   fontSize: '1.6rem',
   lineHeight: 1.5,
   alignSelf: isQuestion ? 'flex-end' : 'flex-start',
-  backgroundColor: isQuestion ? '#007bff' : '#f0f0f0',
+  backgroundColor: isQuestion ? colors.hexVioletAlpha : '#f0f0f0',
   borderRadius: '18px',
-  color: isQuestion ? 'white' : '#333',
+  color: isQuestion ? 'white' : colors.rgbBlackFont,
   borderBottomRightRadius: isQuestion ? '2px' : '18px',
   borderBottomLeftRadius: isQuestion ? '18px' : '2px',
 });
