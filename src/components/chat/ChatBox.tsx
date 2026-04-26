@@ -23,12 +23,11 @@ const ChatWrapper = styled.div`
   margin: 0 auto;
   font-family:
     -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  border: 1px solid ${colors.hexGold};
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   height: 450px;
-  background-color: #fafafa;
+  background-color: #7f6878;
 `;
 
 export default function ChatBox() {

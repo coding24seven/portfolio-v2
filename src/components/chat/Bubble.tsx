@@ -12,9 +12,9 @@ const bubbleStyles = (isQuestion: boolean) => ({
   fontSize: '1.6rem',
   lineHeight: 1.5,
   alignSelf: isQuestion ? 'flex-end' : 'flex-start',
-  backgroundColor: isQuestion ? colors.hexVioletAlpha : '#f0f0f0',
+  backgroundColor: isQuestion ? colors.hexVioletAlpha : colors.hexGold,
   borderRadius: '18px',
-  color: isQuestion ? 'white' : colors.rgbBlackFont,
+  color: 'white',
   borderBottomRightRadius: isQuestion ? '2px' : '18px',
   borderBottomLeftRadius: isQuestion ? '18px' : '2px',
 });
