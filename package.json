@@ -15,7 +15,10 @@
     "test:watch": "vitest",
     "test:ci": "vitest --run",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "docker:build": "docker/build.sh",
+    "docker:run": "docker/run.sh",
+    "docker:start": "docker/start.sh"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

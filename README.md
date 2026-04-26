@@ -10,6 +10,7 @@
   --name portfolio-ui \
   -v "$(pwd):/app" \
   -v "$HOME/.config/opencode:/root/.config/opencode" \
+  -v "$HOME/.local/share/opencode:/root/.local/state/opencode" \
   -v "$HOME/.local/share/opencode:/root/.local/share/opencode" \
   -v "$HOME/.cache/opencode:/root/.cache/opencode" \
   -p 5173:5173 \
