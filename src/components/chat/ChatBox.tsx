@@ -25,7 +25,7 @@ const ChatWrapper = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  height: 450px;
+  height: 480px;
   background-color: #7f6878;
 `;
 
@@ -59,11 +59,19 @@ export default function ChatBox() {
     setHistory((prev) => [...prev, userQuestion, botAnswerPlaceholder]);
 
     startTransition(async () => {
-      const response = await ChatBot.sendPrompt(input);
-      const responseBody = JSON.parse(response.body).response;
-      const botReply: Message = { type: 'Answer', text: responseBody };
+      try {
+        const response = await ChatBot.sendPrompt(input);
+        const responseBody = JSON.parse(response.body).response;
+        const botReply: Message = { type: 'Answer', text: responseBody };
 
-      setHistory((prev) => [...prev.slice(0, -1), botReply]);
+        setHistory((prev) => [...prev.slice(0, -1), botReply]);
+      } catch {
+        const errorMessage: Message = {
+          type: 'Answer',
+          text: 'Something went wrong. Please try again.',
+        };
+        setHistory((prev) => [...prev.slice(0, -1), errorMessage]);
+      }
     });
   };
 

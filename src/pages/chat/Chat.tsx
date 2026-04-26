@@ -6,7 +6,7 @@ const em = config.em.bind(config);
 function getCss() {
   return {
     minHeight: '100vh',
-    padding: '13rem 3rem 3rem 16rem',
+    padding: '8rem 3rem 3rem 16rem',
     backgroundColor: '#32293b',
     [`@media (max-width: ${em(1100)}em)`]: {
       padding: '10.7rem 3rem 3rem 3rem',
@@ -15,10 +15,10 @@ function getCss() {
       padding: '10.7rem 3rem',
     },
     [`@media (max-width: ${em(500)}em)`]: {
-      padding: '8.2rem 1rem',
+      padding: '9.2rem 0',
     },
     [`@media (max-width: ${em(400)}em)`]: {
-      paddingTop: '7.2rem',
+      paddingTop: '8.2rem',
     },
   };
 }
