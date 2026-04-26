@@ -8,13 +8,12 @@ import {
 } from 'react';
 import styled from '@emotion/styled';
 import ChatBot from '@/components/chat/chat.ts';
-import colors from '@/helpers/colors.ts';
 import { Bubble } from '@/components/chat/Bubble.tsx';
 import { MessageArea } from '@/components/chat/MessageArea.tsx';
 import { ChatForm } from '@/components/chat/ChatForm.tsx';
 
 interface Message {
-  type: 'Q' | 'A';
+  type: 'Question' | 'Answer' | 'PendingAnswer';
   text: string;
 }
 
@@ -51,16 +50,20 @@ export default function ChatBox() {
     e.preventDefault();
     if (!input.trim()) return;
 
-    const userQuestion: Message = { type: 'Q', text: input.trim() };
+    const userQuestion: Message = { type: 'Question', text: input.trim() };
+    const botAnswerPlaceholder: Message = {
+      type: 'PendingAnswer',
+      text: 'Bot is thinking',
+    };
     setInput('');
-    setHistory((prev) => [...prev, userQuestion]);
+    setHistory((prev) => [...prev, userQuestion, botAnswerPlaceholder]);
 
     startTransition(async () => {
       const response = await ChatBot.sendPrompt(input);
       const responseBody = JSON.parse(response.body).response;
-      const botReply: Message = { type: 'A', text: responseBody };
+      const botReply: Message = { type: 'Answer', text: responseBody };
 
-      setHistory((prev) => [...prev, botReply]);
+      setHistory((prev) => [...prev.slice(0, -1), botReply]);
     });
   };
 
@@ -74,7 +77,11 @@ export default function ChatBox() {
     <ChatWrapper>
       <MessageArea scrollRef={scrollAreaRef}>
         {history.map((item, index) => (
-          <Bubble key={index} isQuestion={item.type === 'Q'}>
+          <Bubble
+            key={index}
+            isQuestion={item.type === 'Question'}
+            isPending={item.type === 'PendingAnswer'}
+          >
             {item.text}
           </Bubble>
         ))}

@@ -18,7 +18,8 @@
     "test:coverage": "vitest --coverage",
     "docker:build": "docker/build.sh",
     "docker:run": "docker/run.sh",
-    "docker:start": "docker/start.sh"
+    "docker:start": "docker/start.sh",
+    "opencode:web": "opencode web --port 4096 --hostname 0.0.0.0"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
